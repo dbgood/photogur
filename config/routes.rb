@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  get 'pictures' => 'pictures#index'
+  root 'pictures#index'
 
-  post 'pictures' => 'pictures#create' # this is a new line of code
-  get 'pictures/new' => 'pictures#new'
+  get 'pictures/new' => 'pictures#index'
+
   
-  get 'pictures/:id' => 'pictures#show', as: 'picture'
 
 
 end
